@@ -22,7 +22,7 @@ pub struct FpnFeatures<B: Backend>(pub Tensor<B, 4>, pub Tensor<B, 4>, pub Tenso
 /// bottom-up path augmentation.
 #[derive(Module, Debug)]
 pub struct Pafpn<B: Backend> {
-    backbone: CspDarknet<B>,
+    pub(crate) backbone: CspDarknet<B>,
     lateral_conv0: BaseConv<B>,
     c3_n3: CspBottleneck<B>,
     c3_n4: CspBottleneck<B>,

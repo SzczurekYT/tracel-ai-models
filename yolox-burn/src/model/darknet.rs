@@ -21,7 +21,7 @@ pub struct CspDarknet<B: Backend> {
     dark2: CspBlock<B>,
     dark3: CspBlock<B>,
     dark4: CspBlock<B>,
-    dark5: CspBlock<B>,
+    pub(crate) dark5: CspBlock<B>,
 }
 
 impl<B: Backend> CspDarknet<B> {
@@ -118,7 +118,7 @@ impl CspDarknetConfig {
 pub struct CspBlock<B: Backend> {
     conv: Conv<B>,
     c3: CspBottleneck<B>,
-    spp: Option<SppBottleneck<B>>,
+    pub(crate) spp: Option<SppBottleneck<B>>,
 }
 
 impl<B: Backend> CspBlock<B> {

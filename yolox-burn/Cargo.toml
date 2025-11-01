@@ -13,7 +13,7 @@ pretrained = ["burn/network", "std", "dep:dirs"]
 [dependencies]
 # Note: default-features = false is needed to disable std
 burn = { version = "0.19.1", default-features = false }
-burn-import = { version = "0.19.1" }
+burn-store = { version = "0.19.1" }
 itertools = { version = "0.12.1", default-features = false, features = [
     "use_alloc",
 ] }

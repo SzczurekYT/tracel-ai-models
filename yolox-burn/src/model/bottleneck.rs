@@ -70,7 +70,7 @@ impl BottleneckConfig {
 pub struct SppBottleneck<B: Backend> {
     conv1: BaseConv<B>,
     conv2: BaseConv<B>,
-    m: Vec<MaxPool2d>,
+    pub(crate) m: Vec<MaxPool2d>,
 }
 
 impl<B: Backend> SppBottleneck<B> {
