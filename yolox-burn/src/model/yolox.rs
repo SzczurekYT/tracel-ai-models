@@ -306,7 +306,8 @@ impl<B: Backend> Yolox<B> {
             .with_key_remapping(
                 r"(head\.(cls|reg)_convs\.[0-9]+)\.([0-9]+)\.(.+)",
                 "$1.conv$3.$4",
-            );
+            )
+            .skip_enum_variants(true);
 
         self.load_from(&mut store)?;
 
